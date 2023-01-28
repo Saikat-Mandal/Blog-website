@@ -1,0 +1,34 @@
+<%- include('partials/header'); -%>
+
+
+    <main>
+        <div class="blogs">
+
+            <div class="blog">
+                <h1 class="blog-heading">this is home</h1>
+                <p class="blog-para">
+                    <%=para%>
+                </p>
+            </div>
+            <% postArray.forEach(post=>{%>
+
+                <div class="blog">
+                    <h1 class="blog-heading">
+                        <%=post.title%>
+                    </h1>
+                    <p class="blog-para">
+                        <%=post.body.substring(0,100) +"..."%>
+                            <a class="para-link" href="/posts/<%=post._id%>">Read more</a>
+                    </p>
+
+                </div>
+                <% })%>
+
+
+
+        </div>
+    </main>
+
+    </body>
+
+    <%- include('partials/footer'); -%>
